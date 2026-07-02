@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrivyLayer | Privacy Layer for AI Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://static.thenounproject.com/png/254850-200.png" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#6366f1', // Indigo 500
+                            dark: '#4f46e5', // Indigo 600
+                        },
+                        dark: {
+                            900: '#0f172a',
+                            800: '#1e293b',
+                            700: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Ensure the mobile menu transitions smoothly */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-300 font-sans antialiased selection:bg-brand selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-dark-900/95 backdrop-blur-md border-b border-dark-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-brand text-2xl sm:text-3xl"></i>
+                    <span class="font-bold text-xl sm:text-2xl text-white tracking-tight">PrivyLayer</span>
+                </div>
+
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#how-it-works" class="text-sm font-medium hover:text-white transition">How it Works</a>
+                    <a href="#features" class="text-sm font-medium hover:text-white transition">Features</a>
+                    <a href="#usage" class="text-sm font-medium hover:text-white transition">Usage</a>
+                    <a href="#limitations" class="text-sm font-medium hover:text-white transition">Limitations</a>
+                    <a href="https://pypi.org/project/privylayer/" target="_blank" class="bg-brand hover:bg-brand-dark text-white px-5 py-2.5 rounded-lg font-medium transition flex items-center gap-2 shadow-lg shadow-brand/20">
+                        <i class="fa-brands fa-python"></i> PyPI
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2" onclick="toggleMenu()">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-2xl">
+                <a href="#how-it-works" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-dark-700 hover:text-white transition" onclick="toggleMenu()">How it Works</a>
+                <a href="#features" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-dark-700 hover:text-white transition" onclick="toggleMenu()">Features</a>
+                <a href="#usage" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-dark-700 hover:text-white transition" onclick="toggleMenu()">Usage</a>
+                <a href="#limitations" class="block px-3 py-3 rounded-md text-base font-medium hover:bg-dark-700 hover:text-white transition" onclick="toggleMenu()">Limitations</a>
+                <a href="https://pypi.org/project/privylayer/" target="_blank" class="mt-4 block text-center bg-brand hover:bg-brand-dark text-white px-4 py-3 rounded-lg font-medium transition flex justify-center items-center gap-2">
+                    <i class="fa-brands fa-python"></i> View on PyPI
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <main class="pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pb-32 px-4 overflow-hidden flex flex-col items-center justify-center min-h-[90vh]">
+
+        <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white font-bold text-2xl sm:text-3xl animate-bounce">🚀 New Release Coming Soon! <a href="release.html"><span class="text-blue-400 underline decoration-wavy">Click here.</span> </a></h2>
+    </div> 
+    <br> <br> <br>
+
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+                Protect sensitive data <br class="hidden sm:block">
+                <span class="bg-gradient-to-r from-brand to-purple-500 gradient-text">before it reaches the LLM.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-base sm:text-lg md:text-xl text-slate-400 mx-auto mb-10 px-4 sm:px-0">
+                A lightweight Python library designed to act as a secure buffer between user input and AI models. Detect PII, mask it with secure tokens, and restore it seamlessly.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full px-4 sm:px-0">
+                <div class="bg-dark-800 border border-dark-700 rounded-lg flex items-center px-6 py-3.5 text-sm sm:text-base font-mono text-slate-300 w-full sm:w-auto justify-center shadow-inner">
+                    <span class="text-brand mr-2">$</span> pip install privylayer
+                </div>
+                <a href="#usage" class="bg-white text-dark-900 hover:bg-slate-200 px-8 py-3.5 rounded-lg font-bold transition flex items-center justify-center gap-2 w-full sm:w-auto shadow-lg shadow-white/10">
+                    Get Started <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section id="how-it-works" class="py-16 sm:py-24 bg-dark-800 border-t border-b border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12 sm:mb-16">How It Works</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+                <div class="p-6 sm:p-8 bg-dark-900 rounded-2xl border border-dark-700 hover:border-brand/50 transition-colors">
+                    <div class="bg-brand/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 text-brand text-xl">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">1. User Input</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 font-mono bg-dark-800 p-2 rounded break-words">"My Aadhaar is [Redacted]."</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-dark-900 rounded-2xl border border-dark-700 hover:border-brand/50 transition-colors">
+                    <div class="bg-brand/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 text-brand text-xl">
+                        <i class="fa-solid fa-mask"></i>
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">2. Mask</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 font-mono bg-dark-800 p-2 rounded break-words">"Aadhaar is ⟦PII_AADHAAR_x1⟧."</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-dark-900 rounded-2xl border border-dark-700 hover:border-brand/50 transition-colors">
+                    <div class="bg-brand/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 text-brand text-xl">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">3. AI Model</h3>
+                    <p class="text-sm text-slate-400">Processes the masked text in total safety without exposure.</p>
+                </div>
+                <div class="p-6 sm:p-8 bg-dark-900 rounded-2xl border border-dark-700 hover:border-brand/50 transition-colors">
+                    <div class="bg-brand/20 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6 text-brand text-xl">
+                        <i class="fa-solid fa-unlock-keyhole"></i>
+                    </div>
+                    <h3 class="text-white text-lg font-bold mb-3">4. Restore</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 font-mono bg-dark-800 p-2 rounded break-words">Swaps token back to original.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">✨ Features</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="bg-dark-800 p-2 rounded-lg mr-4 mt-0.5"><i class="fa-solid fa-magnifying-glass text-brand"></i></div>
+                            <div>
+                                <strong class="text-white block sm:inline text-lg sm:text-base">Advanced Detection:</strong> <span class="text-slate-400 sm:text-slate-300">Optimized patterns for precise PII identification.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-dark-800 p-2 rounded-lg mr-4 mt-0.5"><i class="fa-solid fa-check-double text-brand"></i></div>
+                            <div>
+                                <strong class="text-white block sm:inline text-lg sm:text-base">Checksum Validation:</strong> <span class="text-slate-400 sm:text-slate-300">Verifies mathematical integrity (e.g., Verhoeff).</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-dark-800 p-2 rounded-lg mr-4 mt-0.5"><i class="fa-solid fa-rotate text-brand"></i></div>
+                            <div>
+                                <strong class="text-white block sm:inline text-lg sm:text-base">Reversible Masking:</strong> <span class="text-slate-400 sm:text-slate-300">Maintain total context without data loss.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-dark-800 p-2 rounded-lg mr-4 mt-0.5"><i class="fa-solid fa-brain text-brand"></i></div>
+                            <div>
+                                <strong class="text-white block sm:inline text-lg sm:text-base">Smart Tokenization:</strong> <span class="text-slate-400 sm:text-slate-300">Structured <code class="text-xs bg-dark-900 border border-dark-700 px-1.5 py-0.5 rounded text-brand">⟦PII_TYPE_ID⟧</code> format for LLMs.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-dark-800 p-2 rounded-lg mr-4 mt-0.5"><i class="fa-solid fa-bolt text-brand"></i></div>
+                            <div>
+                                <strong class="text-white block sm:inline text-lg sm:text-base">Fast & Lightweight:</strong> <span class="text-slate-400 sm:text-slate-300">Minimal overhead for real-time applications.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-dark-800 p-2 rounded-lg mr-4 mt-0.5"><i class="fa-solid fa-lock text-brand"></i></div>
+                            <div>
+                                <strong class="text-white block sm:inline text-lg sm:text-base">No Data Leakage:</strong> <span class="text-slate-400 sm:text-slate-300">Ensures sensitive data is never exposed. Data is not Stored in any database. It never leaves your system.</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="order-1 lg:order-2 bg-gradient-to-b from-dark-800 to-dark-900 p-6 sm:p-10 rounded-3xl border border-dark-700 shadow-xl">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">🧩 Supported Data Types</h2>
+                    <p class="text-slate-400 mb-8 text-sm sm:text-base">Built natively with India-specific compliance in mind.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 bg-dark-900/50 p-4 rounded-xl border border-dark-700 hover:border-brand/40 transition">
+                            <i class="fa-solid fa-mobile-screen text-brand text-xl"></i> <span class="font-medium">Phone Numbers</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-dark-900/50 p-4 rounded-xl border border-dark-700 hover:border-brand/40 transition">
+                            <i class="fa-solid fa-envelope text-brand text-xl"></i> <span class="font-medium">Emails</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-dark-900/50 p-4 rounded-xl border border-dark-700 hover:border-brand/40 transition">
+                            <i class="fa-solid fa-address-card text-brand text-xl"></i> <span class="font-medium">Aadhaar (Checksum)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-dark-900/50 p-4 rounded-xl border border-dark-700 hover:border-brand/40 transition">
+                            <i class="fa-solid fa-id-card text-brand text-xl"></i> <span class="font-medium">PAN Numbers</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-dark-900/50 p-4 rounded-xl border border-dark-700 hover:border-brand/40 transition sm:col-span-2 lg:col-span-1 xl:col-span-2">
+                            <i class="fa-solid fa-building-columns text-brand text-xl"></i> <span class="font-medium">IFSC Codes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" class="py-16 sm:py-24 bg-dark-800 border-t border-b border-dark-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-10">🛠️ Usage</h2>
+            
+            <div class="bg-dark-900 rounded-2xl overflow-hidden border border-dark-700 shadow-2xl">
+                <div class="flex items-center justify-between px-4 sm:px-6 py-3 bg-[#0d1117] border-b border-dark-700">
+                    <div class="flex space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                    </div>
+                    <span class="text-xs text-slate-500 font-mono">mask_example.py</span>
+                </div>
+                <div class="p-4 sm:p-8 overflow-x-auto">
+<pre><code class="text-xs sm:text-sm font-mono text-slate-300 leading-relaxed"><span class="text-purple-400">import</span> privylayer <span class="text-purple-400">as</span> pl
+
+<span class="text-slate-500"># 1. Protect (Mask data)</span>
+text = <span class="text-green-400">"My phone is 9876543210 and Aadhaar is [Aadhaar Redacted]"</span>
+mask, context, seen = pl.mask(text)
+
+<span class="text-blue-400">print</span>(mask)
+<span class="text-slate-500"># Output: My phone is ⟦PII_PHONE_x1⟧ and Aadhaar is ⟦PII_AADHAAR_x1⟧</span>
+
+<span class="text-slate-500"># 2. Restore (Unmask data)</span>
+original = pl.restore(masked_response, context)
+
+<span class="text-blue-400">print</span>(original)
+<span class="text-slate-500"># Output: My phone is 9876543210 and Aadhaar is [Aadhaar Redacted]</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="limitations" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="bg-gradient-to-br from-brand/10 to-transparent p-6 sm:p-10 rounded-3xl border border-brand/20 h-full">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8">🚀 Roadmap</h2>
+                    <ul class="space-y-5 text-sm sm:text-base">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-regular fa-square text-brand text-lg"></i></div>
+                            <span>AI-based entity and name detection</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-regular fa-square text-brand text-lg"></i></div>
+                            <span>Risk scoring system for data sensitivity</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-regular fa-square text-brand text-lg"></i></div>
+                            <span>Global expansion for major country detection</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-regular fa-square text-brand text-lg"></i></div>
+                            <span>API Gateway integration</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-6 sm:p-10 rounded-3xl border border-red-900/50 bg-red-900/10 h-full">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-red-400"></i> Limitations
+                    </h2>
+                    <ul class="space-y-5 text-sm sm:text-base text-slate-300">
+                        <li class="flex flex-col sm:flex-row gap-2 sm:gap-4"><strong class="text-white min-w-[140px]">No DB Lookup:</strong> <span>PAN/IFSC uses structural regex matching, not external banking APIs.</span></li>
+                        <li class="flex flex-col sm:flex-row gap-2 sm:gap-4"><strong class="text-white min-w-[140px]">Checksum Only:</strong> <span>Performs mathematical validation but no biometric/OTP authentication.</span></li>
+                        <li class="flex flex-col sm:flex-row gap-2 sm:gap-4"><strong class="text-white min-w-[140px]">Regex-Based:</strong> <span>May occasionally struggle with dictionary words used as names.</span></li>
+                        <li class="flex flex-col sm:flex-row gap-2 sm:gap-4"><strong class="text-white min-w-[140px]">Stateless:</strong> <span>You are responsible for securely managing the mapping context in your environment.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="bg-blue-900 border-t py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <br>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6"><i class="fa-solid fa-gauge-simple-high"></i> Benchmarks</h2>
+            <p class="text-white mb-8 text-sm sm:text-base">Performance metrics for masking and restoring sensitive data.</p>
+            <center>
+                <a href="benchmark_v21_0726.pdf">
+                    <button class="bg-dark-900 hover:bg-dark-800 text-white px-6 py-3 rounded-lg font-medium transition flex items-center gap-2 shadow-lg shadow-dark-900/20">
+                        <i class="fa-solid fa-eye"></i> View Benchmark Report
+                    </button>
+                </a>
+            </center>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-24 bg-dark-800 border-t border-b border-dark-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">📬 Get in Touch</h2>
+            <p class="text-slate-400 mb-8 text-sm sm:text-base">Have questions, feedback, or want to contribute? Reach out!</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="email" placeholder="Your Email" class="w-full sm:w-auto px-4 py-3 rounded-lg bg-dark-900 border border-dark-700 text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand focus:border-brand transition">
+                <button class="bg-brand hover:bg-brand-dark text-white px-6 py-3 rounded-lg font-medium transition flex items-center gap-2 shadow-lg shadow-brand/20">
+                    <i class="fa-solid fa-paper-plane"></i> Send
+                
+
+                </div>
+                </section>
+
+    <footer class="bg-dark-900 border-t border-dark-800 py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center items-center gap-6 mb-8 text-2xl sm:text-3xl text-slate-400">
+                <a href="https://github.com/NithishProgrammer" class="hover:text-white transition transform hover:scale-110"><i class="fa-brands fa-github"></i></a>
+                <a href="https://pypi.org/project/privylayer/" class="hover:text-white transition transform hover:scale-110"><i class="fa-brands fa-python"></i></a>
+            </div>
+            <p class="text-slate-400 mb-3 text-base sm:text-lg">Built by <strong class="text-white">Nithish</strong> 🚀</p>
+            <p class="text-sm text-slate-500 mb-8 max-w-md mx-auto">Vision: Making AI safe for everyone by protecting sensitive data at the source.</p>
+            <p class="text-xs text-slate-600">Released under the MIT License.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark'); // Change to close icon
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars'); // Change back to hamburger
+            }
+        }
+    </script>
+</body>
+</html>
