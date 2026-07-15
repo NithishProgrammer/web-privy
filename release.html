@@ -3,13 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>New Release on PrivyLayer</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,141 +18,178 @@
 <div class="blob blob3"></div>
 
 <header>
-
-<div class="tag">
-🚀 New Release
-</div>
-
-<h1>Privilayer Goes Visual</h1>
-
-<p class="subtitle">
-Image-based PII Detection & Masking is almost here.
-Built for speed, security and privacy-first AI pipelines.
-</p>
-
-<div class="status-card">
-
-<div>
-<span>Status</span>
-<strong>Currently Testing</strong>
-</div>
-
-<div>
-<span>Release</span>
-<strong>Coming Soon</strong>
-</div>
-
-</div>
-
+    <div class="tag">🚀 New Release</div>
+    <h1>Privilayer Goes Visual</h1>
+    <p class="subtitle">
+    Image-based PII Detection & Masking is here.
+    Built for speed, security and privacy-first AI pipelines.
+    </p>
+    <div class="status-card">
+        <div>
+            <span>Status</span>
+            <strong>Live</strong>
+        </div>
+        <div>
+            <span>Release</span>
+            <strong>15 Jul 2026</strong>
+        </div>
+    </div>
 </header>
 
 <main>
+    <section class="card reveal">
+        <h2>Release Update</h2>
+        <p>We are excited to announce a major update to <strong>Privilayer</strong>.</p>
+        <p>
+        Privilayer has always helped developers protect sensitive text before
+        sending prompts to Large Language Models. Now we're expanding beyond
+        text into the visual world.
+        </p>
+        <p>
+        The new release introduces
+        <strong>Image-based PII Detection & Automatic Masking.</strong>
+        </p>
+    </section>
 
-<section class="card reveal">
+    <section class="features">
+        <div class="feature reveal">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+                  <circle cx="9" cy="9" r="2"/>
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+                </svg>
+            </div>
+            <h3>Image-to-Image Masking</h3>
+            <p>
+            Upload an image and Privilayer automatically detects faces,
+            documents, ID cards, license plates, and other sensitive information,
+            returning a fully masked image ready for AI.
+            </p>
+        </div>
 
-<h2>Pre-Release Update</h2>
+        <div class="feature reveal">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+            </div>
+            <h3>Optimized Performance</h3>
+            <p>
+            Designed with ultra-low latency in mind, enabling high-speed image
+            processing without slowing down your LLM workflow.
+            </p>
+        </div>
 
-<p>
-We are excited to announce a major upcoming update to
-<strong>Privilayer</strong>.
-</p>
+        <div class="feature reveal">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="6"/>
+                  <circle cx="12" cy="12" r="2"/>
+                </svg>
+            </div>
+            <h3>High Accuracy</h3>
+            <p>
+            Advanced detection models minimize false positives while ensuring
+            sensitive information never slips through.
+            </p>
+        </div>
+    </section>
 
-<p>
-Privilayer has always helped developers protect sensitive text before
-sending prompts to Large Language Models. Now we're expanding beyond
-text into the visual world.
-</p>
+    <section class="card reveal">
+        <h2>How it works: Core Workflow & Lifecycle</h2>
+        
+        <div class="workflow-list">
+            <div class="workflow-step">
+                <div class="step-icon" style="background: rgba(124,58,237,.15); border-color: rgba(124,58,237,.3);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <div class="step-text">
+                    <p><strong>Input:</strong> The system locally intercepts raw visual data—such as image uploads or document scans—before any transmission occurs.</p>
+                </div>
+            </div>
 
-<p>
-The next release introduces
-<strong>Image-based PII Detection & Automatic Masking.</strong>
-</p>
+            <div class="workflow-step">
+                <div class="step-icon" style="background: rgba(0,212,255,.15); border-color: rgba(0,212,255,.3);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3"/><path d="M19 12h3"/><path d="M12 2v3"/><path d="M12 19v3"/><path d="M5 5l2 2"/><path d="M17 17l2 2"/><path d="M5 19l2-2"/><path d="M17 5l2 2"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <div class="step-text">
+                    <p><strong>Targeted Detect:</strong> Advanced computer vision scans the input to specifically identify highly sensitive identity documents, including Aadhaar, PAN, Passports, and other documents.</p>
+                </div>
+            </div>
 
-</section>
+            <div class="workflow-step">
+                <div class="step-icon" style="background: rgba(0,255,136,.15); border-color: rgba(0,255,136,.3);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6"/></svg>
+                </div>
+                <div class="step-text">
+                    <p><strong>Masks:</strong> PrivyLayer applies permanent black box overlays directly onto the detected confidential information, completely obscuring the sensitive pixels before the image is sent out.</p>
+                </div>
+            </div>
 
-<section class="features">
+            <div class="workflow-step">
+                <div class="step-icon" style="background: rgba(255,60,172,.15); border-color: rgba(255,60,172,.3);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff3cac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div class="step-text">
+                    <p><strong>Images are Irreversible:</strong> The visual sanitization process is strictly a one-way pipeline. Once the image is processed for the AI, the original visual state cannot be reconstructed or reversed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="feature reveal">
+    <section class="card reveal">
+        <h2>Requirements</h2>
+        <p>To maintain low-latency localized processing and handle real-time computer vision workloads, the host system must meet the following infrastructure criteria:</p>
+        <p><strong>GPU Acceleration:</strong> Requires dedicated graphics hardware optimized for parallel image processing and computer vision workloads.</p>
+        <p><strong>Minimum Requirement:</strong> An NVIDIA T4 GPU (or equivalent) to ensure better, real-time document detection and instant black-box masking before data transmission.</p>
+    </section>
 
-<div class="icon">🖼️</div>
+    <div class="coming reveal">
+        <div class="pulse"></div>
+        <h2>Install it here (Developers)</h2>
+        <p>
+            <code class="inline-code">pip install privylayer-images</code>
+        </p>
+    </div>
 
-<h3>Image-to-Image Masking</h3>
+    <div class="coming reveal">
+        <h2>Example Usage</h2> 
+        <div class="code-window">
+            <div class="code-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <pre><code><span class="token-import">import</span> privyimage
 
-<p>
-Upload an image and Privilayer automatically detects faces,
-documents, ID cards, license plates, and other sensitive information,
-returning a fully masked image ready for AI.
-</p>
+<span class="token-var">img_path</span> = <span class="token-string">"example.jpg"</span>
 
-</div>
+<span class="token-func">privyimage.mask_img</span>(img_path)
 
-<div class="feature reveal">
+<span class="token-comment"># The output image will be "path/to/image_masked.jpg" with all sensitive information masked.</span></code></pre>
+        </div>
+    </div>
 
-<div class="icon">⚡</div>
+    <br>
+    <div style="text-align: center; margin-top: 20px;">
+        <h2>Demo Video</h2>
+        <p>See the privacy-preserving image masking in action.</p>
+        <br>
 
-<h3>Optimized Performance</h3>
-
-<p>
-Designed with ultra-low latency in mind, enabling high-speed image
-processing without slowing down your LLM workflow.
-</p>
-
-</div>
-
-<div class="feature reveal">
-
-<div class="icon">🎯</div>
-
-<h3>High Accuracy</h3>
-
-<p>
-Advanced detection models minimize false positives while ensuring
-sensitive information never slips through.
-</p>
-
-</div>
-
-</section>
-
-<section class="card reveal">
-
-<h2>Currently in Testing</h2>
-
-<p>
-Nithish is rigorously testing the new image pipeline,
-fine-tuning, improving speed, and eliminating edge cases to
-deliver a reliable production-ready experience.
-</p>
-
-<p>
-We're almost there.
-The release will be available as soon as testing is complete.
-</p>
-
-</section>
-
-<div class="coming reveal">
-
-<div class="pulse"></div>
-
-<h2>Coming Soon</h2>
-
-<p>
-The next evolution of privacy-first AI starts here.
-Stay tuned.
-</p>
-
-</div>
+        <video style="border-radius: 12px;" width="640" height="360" controls poster="vid_thumbnail.png">
+  <source src="privylayer_img_demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    </div>
 
 </main>
 
 <footer>
-
-Made with ❤️ for Privacy-first AI
-
+    Made with ❤️ for Privacy-first AI
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
