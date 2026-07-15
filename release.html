@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Release on PrivyLayer</title>
+<title>PrivyLayer-Image Release</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -35,6 +36,12 @@
         </div>
     </div>
 </header>
+
+<section>
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="window.location.href='https://pypi.org/project/privylayer-images/'" style="background-image: linear-gradient(45deg, #7700ff, #93abfc); padding: 18px; width: 200px; border: none; font-size: medium; cursor: pointer; border-radius: 10px; color: white; font-weight: bold; transition: background-color 0.3s ease;"><i class="fa-brands fa-python"></i> PyPi</button>
+    </div>
+</section>
 
 <main>
     <section class="card reveal">
@@ -162,7 +169,7 @@
                 <span class="dot yellow"></span>
                 <span class="dot green"></span>
             </div>
-            <pre><code><span class="token-import">import</span> privyimage
+            <pre><code><span class="token-import">import</span> privyimage  <span class="token-comment"># Use (privyimage) while importing</span>
 
 <span class="token-var">img_path</span> = <span class="token-string">"example.jpg"</span>
 
